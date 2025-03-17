@@ -51,6 +51,9 @@ public class QueueBorneeRapide implements QueueBorneeIntegerInterface{
         // Copier les éléments sauf le premier
         System.arraycopy(elements, 1, newArray, 0, newArray.length);
 
+        // Update the elements reference to point to the new array
+        this.elements = newArray;
+
         this.taille--;
         return first;
     }
