@@ -51,7 +51,7 @@ public class QueueBorneeLente implements QueueBorneeIntegerInterface {
 
         int first = this.elements[this.head];
         this.elements[this.head] = null;
-        if(this.head == this.capacity) this.head=0;
+        if(this.head == this.capacity-1) this.head=0;
         else this.head ++;
         this.taille--;
         return first;
